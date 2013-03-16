@@ -40,4 +40,7 @@
 (require 'rhtml-mode)
 
 ;;Open .json files with json-mode
-(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
+(add-to-list 'auto-mode-alist '(".json" . json-mode))
+
+;;Add related css files like .scss to css-mode
+(add-to-list 'auto-mode-alist '(".css" . css-mode))

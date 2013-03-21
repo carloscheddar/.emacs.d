@@ -27,13 +27,13 @@
  )
 
 ;; Rake files are ruby, too, as are gemspecs, rackup files, etc.
-(add-to-list 'auto-mode-alist '("\\.rake$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.gemspec$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("\\.ru$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Rakefile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
-(add-to-list 'auto-mode-alist '("Vagrantfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.rake$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.gemspec$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.ru$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Rakefile$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Capfile$" . enh-ruby-mode))
+(add-to-list 'auto-mode-alist '("Vagrantfile$" . enh-ruby-mode))
 
 ;;Add rhtml-mode to read html.erb files
 (add-to-list 'load-path "~/.emacs.d/elpa/rhtml")
@@ -44,3 +44,6 @@
 
 ;;Add related css files like .scss to css-mode
 (add-to-list 'auto-mode-alist '(".css" . css-mode))
+
+(setq enh-ruby-program "~/.rvm/rubies/default/bin/ruby")
+(require 'enh-ruby-mode)

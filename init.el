@@ -26,7 +26,13 @@
  ;; If there is more than one, they won't work right.
  )
 
+;Setup enhance ruby mode
+(setq enh-ruby-program "~/.rvm/rubies/default/bin/ruby")
+(require 'enh-ruby-mode)
+
 ;; Rake files are ruby, too, as are gemspecs, rackup files, etc.
+
+(add-to-list 'auto-mode-alist '(".rb" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.rake$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.gemspec$" . enh-ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.ru$" . enh-ruby-mode))
@@ -45,5 +51,3 @@
 ;;Add related css files like .scss to css-mode
 (add-to-list 'auto-mode-alist '(".css" . css-mode))
 
-(setq enh-ruby-program "~/.rvm/rubies/default/bin/ruby")
-(require 'enh-ruby-mode)

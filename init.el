@@ -50,4 +50,3 @@
 
 ;;Add related css files like .scss to css-mode
 (add-to-list 'auto-mode-alist '(".css" . css-mode))
-

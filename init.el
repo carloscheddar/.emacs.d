@@ -50,3 +50,12 @@
 
 ;;Add related css files like .scss to css-mode
 (add-to-list 'auto-mode-alist '(".css" . css-mode))
+
+;;Add powerline
+;;Current colors to add to powerline.el: 
+;;active1, inactive2 = #C64E3A; active2, inactive1 =#BFBFBF
+(powerline-center-theme)
+
+;;Add Parenthesis Highlight
+(setq show-paren-style 'parenthesis)
+(show-paren-mode)

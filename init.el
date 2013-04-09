@@ -53,9 +53,15 @@
 
 ;;Add powerline
 ;;Current colors to add to powerline.el: 
-;;active1, inactive2 = #C64E3A; active2, inactive1 =#BFBFBF
+;;active1, inactive2 = #C64E3A; active2, inactive1 = #BFBFBF
 (powerline-center-theme)
 
 ;;Add Parenthesis Highlight
 (setq show-paren-style 'parenthesis)
 (show-paren-mode)
+
+;;Add a function to "Beautify" json files from http://irreal.org/blog/?p=354
+(defun json-format ()
+  (interactive)
+  (save-excursion
+    (shell-command-on-region (mark) (point) "python -m json.tool" (buffer-name) t)))

@@ -65,3 +65,6 @@
   (interactive)
   (save-excursion
     (shell-command-on-region (mark) (point) "python -m json.tool" (buffer-name) t)))
+
+;; Added Goto-line short-cut key from http://www.stylesen.org/emacs_goto_line
+(global-set-key "\C-l" 'goto-line)
